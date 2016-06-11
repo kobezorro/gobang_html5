@@ -76,7 +76,7 @@
 				<input type="button" id="startgame" value="开始游戏" />
 			</div>
 			<div id="winer" class="pnl winer">
-				<img src="http://sandbox.runjs.cn/uploads/rs/62/nbqodq5i/winer.jpeg" width="600" height="600" />
+				<img src="./img/win.png" max-width="600" max-height="600" />
 				<h1 id="winerName">恭喜！xxx赢了</h1>
 				<input type="button" value="再来一把" tabindex="0" autofocus="autofocus" onclick="restartgui()" />
 			</div>
@@ -96,7 +96,7 @@
 		var chessbgObj = document.getElementsByName("chessbg");
 		var winerpnl = document.getElementById("winer");
 		document.getElementById("startgame").addEventListener("click", function() {
-			
+
 			function initParams() {
 				var chessTypeValue = 1;
 				if (chesstypeobj.length > 0) {
@@ -162,7 +162,7 @@
 					}
 				}
 				/**
-				 * 每次下棋后触发事件 
+				 * 每次下棋后触发事件
 				 * @param {Object} c2d
 				 */
 			gb.operate = function(opt, c2d) {
@@ -188,7 +188,7 @@
 			}
 			gb.start();
 		});
-		
+
 		document.getElementById("openComputer").addEventListener("change", function() {
 			if (this.checked) {
 				plname2Input.value = "电脑";
@@ -198,9 +198,9 @@
 				plname2Input.disabled = "";
 			}
 		});
-		
+
 		//document.getElementById("openComputer").checked="checked";
-		
+
 		//重新开始
 		function restartgui() {
 			if (gb) {
